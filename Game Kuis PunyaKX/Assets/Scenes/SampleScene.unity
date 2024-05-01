@@ -1061,8 +1061,9 @@ GameObject:
   - component: {fileID: 738614851}
   - component: {fileID: 738614850}
   - component: {fileID: 738614849}
+  - component: {fileID: 738614852}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Jawaban B Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1131,7 +1132,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 738614850}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 738614852}
+        m_TargetAssemblyTypeName: UI_PoinJawaban, Assembly-CSharp
+        m_MethodName: PilihJawaban
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &738614850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,6 +1183,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738614847}
   m_CullTransparentMesh: 1
+--- !u!114 &738614852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738614847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef7ef5e6ab2888449d1eb9d58fe716d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _teksJawaban: {fileID: 498882069}
+  _adalahBenar: 0
 --- !u!1 &742303026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1042082991}
+  - component: {fileID: 1042082992}
   m_Layer: 5
   m_Name: Soal
   m_TagString: Untagged
@@ -1564,6 +1592,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1042082992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042082990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744867ad1c665804892e3cf007ac85bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempatTeks: {fileID: 742303028}
+  tempatGambar: {fileID: 56864301}
 --- !u!1 &1080239004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,8 +1866,9 @@ GameObject:
   - component: {fileID: 1294304698}
   - component: {fileID: 1294304697}
   - component: {fileID: 1294304696}
+  - component: {fileID: 1294304699}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Jawaban C Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1894,7 +1937,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1294304697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1294304699}
+        m_TargetAssemblyTypeName: UI_PoinJawaban, Assembly-CSharp
+        m_MethodName: PilihJawaban
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1294304697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1933,6 +1988,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1294304694}
   m_CullTransparentMesh: 1
+--- !u!114 &1294304699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294304694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef7ef5e6ab2888449d1eb9d58fe716d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _teksJawaban: {fileID: 266548947}
+  _adalahBenar: 0
 --- !u!1 &1303732333
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,8 +2327,9 @@ GameObject:
   - component: {fileID: 1538038287}
   - component: {fileID: 1538038286}
   - component: {fileID: 1538038285}
+  - component: {fileID: 1538038288}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Jawaban A Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2328,7 +2398,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1538038286}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1538038288}
+        m_TargetAssemblyTypeName: UI_PoinJawaban, Assembly-CSharp
+        m_MethodName: PilihJawaban
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1538038286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2367,6 +2449,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538038283}
   m_CullTransparentMesh: 1
+--- !u!114 &1538038288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538038283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef7ef5e6ab2888449d1eb9d58fe716d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _teksJawaban: {fileID: 986034386}
+  _adalahBenar: 1
 --- !u!1 &1789015796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,8 +2596,9 @@ GameObject:
   - component: {fileID: 2109926201}
   - component: {fileID: 2109926200}
   - component: {fileID: 2109926199}
+  - component: {fileID: 2109926202}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Jawaban D Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2570,7 +2667,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2109926200}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2109926202}
+        m_TargetAssemblyTypeName: UI_PoinJawaban, Assembly-CSharp
+        m_MethodName: PilihJawaban
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2109926200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2609,6 +2718,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109926197}
   m_CullTransparentMesh: 1
+--- !u!114 &2109926202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109926197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef7ef5e6ab2888449d1eb9d58fe716d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _teksJawaban: {fileID: 570575287}
+  _adalahBenar: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
