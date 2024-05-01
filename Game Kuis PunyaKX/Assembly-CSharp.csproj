@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\TesFolder\TesNewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\UI_Pertanyaan.cs" />
+    <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\UI_PoinJawaban.cs" />
   </ItemGroup>
   <ItemGroup>

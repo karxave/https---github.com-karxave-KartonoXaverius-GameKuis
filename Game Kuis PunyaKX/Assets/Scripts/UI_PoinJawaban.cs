@@ -14,4 +14,10 @@ public class UI_PoinJawaban : MonoBehaviour
         Debug.Log($"{_teksJawaban.text} Adalah {_adalahBenar}");
     }
 
+    public void SetJawaban(string teksJawaban, bool adalahBenar)
+    {
+        _teksJawaban.text = teksJawaban;
+        _adalahBenar = adalahBenar;
+    }
+
 }
