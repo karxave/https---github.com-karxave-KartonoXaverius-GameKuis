@@ -4,9 +4,13 @@ using UnityEngine.UI;
 
 
 public class UI_Pertanyaan : MonoBehaviour
-{   
+{
+    [SerializeField]
+    private TextMeshProUGUI _tempatJudul = null;
+
     [SerializeField]
     private TextMeshProUGUI _tempatTeks = null;
+    
     [SerializeField]
     private Image _tempatGambar = null;
 
@@ -17,8 +21,9 @@ public class UI_Pertanyaan : MonoBehaviour
         Debug.Log(_tempatTeks.text);        
     }
 
-    public void SetPertanyaan(string teksPertanyaan, Sprite gambarHint)
+    public void SetPertanyaan(string judul, string teksPertanyaan, Sprite gambarHint)
     {
+        _tempatJudul.text = judul;
         _tempatTeks.text = teksPertanyaan;
         _tempatGambar.sprite = gambarHint;
     }
