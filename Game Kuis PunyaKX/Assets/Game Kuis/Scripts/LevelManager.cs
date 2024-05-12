@@ -3,6 +3,9 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField]
+    private InitialDataGamePlay _initialData = null;
+
+    [SerializeField]
     private PlayerProgress _playerProgress = null;
    
     [SerializeField]
@@ -16,6 +19,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private UI_PoinJawaban[] _pilihanJawaban = new UI_PoinJawaban[0];
 
+    [SerializeField]
+    private GameSceneManager _gameSceneManager = null;
+
+    [SerializeField]
+    private string _nameSceneChooseMenu = string.Empty;
+
     public void NextLevel()
     {
         //soal index selanjutnya
@@ -24,7 +33,9 @@ public class LevelManager : MonoBehaviour
         //Jika index melampaui soal terakhir, ulang dari awal
         if (_indexSoal >= _soalSoal.BanyakLevel)
         {
-            _indexSoal = 0;
+            // _indexSoal = 0;
+            _gameSceneManager.OpenScene(_nameSceneChooseMenu);
+            return;
         }
 
         // Ambil data pertanyaan dari array
@@ -48,18 +59,39 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!_playerProgress.MuatProgress())
-            {
-                 _playerProgress.SimpanProgress();
-            }
-        
+        //if (!_playerProgress.MuatProgress())
+        //    {
+        //         _playerProgress.SimpanProgress();
+        //    }
+
+        _soalSoal = _initialData.levelPack;
+
+        _indexSoal = _initialData.levelIndex - 1;
        
         NextLevel();
+
+        //subscribe events
+        UI_PoinJawaban.EventJawabSoal += UI_PoinJawaban_EventJawabSoal;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDestroy()
     {
-        
+        //unsubscribe events
+        UI_PoinJawaban.EventJawabSoal -= UI_PoinJawaban_EventJawabSoal;
     }
+
+   private void UI_PoinJawaban_EventJawabSoal(string answer, bool answerIsCorrect) 
+    {
+        if (answerIsCorrect)
+        {
+            _playerProgress.progressData.koin += 20;
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        _initialData.GameIsOver = false;
+    }
+
+
 }
