@@ -19,22 +19,36 @@ public class PlayerProgress : ScriptableObject
     [SerializeField]
     private string _filename = "contoh.txt";
 
+    [SerializeField]
+    private string _startingLevelPackname = string.Empty;
+
     public MainData progressData = new MainData();
 
     public void SimpanProgress()
     {
         // sampel data
-        progressData.koin = 200;
+        //progressData.koin = 200;
         
-        if (progressData.progressLevel == null)
-            progressData.progressLevel = new();
+        //if (progressData.progressLevel == null)
+        //    progressData.progressLevel = new();
 
-        progressData.progressLevel.Add("Level Pack 1", 3);
-        progressData.progressLevel.Add("Level Pack 3", 5);
+        //progressData.progressLevel.Add("Level Pack 1", 3);
+        //progressData.progressLevel.Add("Level Pack 3", 5);
 
+        // simpan Starting Data saat objek Dictionary tidak ada ketika dimuat/ di load
+        if (progressData.progressLevel == null)  // cek dulu, apakah objek Dictionary sudah pernah dibuat , kalo udah dibuat berarti bukan null
+        {
+            progressData.progressLevel = new();  // karena null ( belum pernah dibuat) , maka buat baru
+            progressData.koin = 0;              // inisial koin = 0 
+            progressData.progressLevel.Add(_startingLevelPackname, 1); // inisial level pertama
+        }
 
         // informasi penyimpanan data
-        var directory = Application.dataPath + "/Temporary";
+#if UNITY_EDITOR
+        string directory = Application.dataPath + "/Temporary/";
+#elif (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+        string directory = Application.persistentDataPath + "/ProgresLokal/";
+#endif
 
         var path = directory + "/" + _filename;
 
@@ -89,7 +103,13 @@ public class PlayerProgress : ScriptableObject
     public bool MuatProgress()
     {
         // informasi penyimpanan data
-        string directory = Application.dataPath + "/Temporary";
+       // string directory = Application.dataPath + "/Temporary";
+
+#if UNITY_EDITOR
+        string directory = Application.dataPath + "/Temporary/";
+#elif (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+        string directory = Application.persistentDataPath + "/ProgresLokal/";
+#endif
 
         string path = directory + "/" + _filename;
 

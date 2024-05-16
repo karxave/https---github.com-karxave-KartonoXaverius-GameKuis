@@ -68,6 +68,7 @@
     <Compile Include="Assets\Game Kuis\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Game Kuis\Scripts\LevelMenuDataManager.cs" />
     <Compile Include="Assets\TesFolder\TesNewBehaviourScript.cs" />
+    <Compile Include="Assets\Game Kuis\Scripts\UI_MenuConfirmMessage.cs" />
     <Compile Include="Assets\Game Kuis\Scripts\LevelPackKuis.cs" />
     <Compile Include="Assets\Game Kuis\Scripts\Ui_OpsiLevelKuis.cs" />
     <Compile Include="Assets\Game Kuis\Scripts\UI_PesanLevel.cs" />

@@ -59,11 +59,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //if (!_playerProgress.MuatProgress())
-        //    {
-        //         _playerProgress.SimpanProgress();
-        //    }
-
+      
         _soalSoal = _initialData.levelPack;
 
         _indexSoal = _initialData.levelIndex - 1;
