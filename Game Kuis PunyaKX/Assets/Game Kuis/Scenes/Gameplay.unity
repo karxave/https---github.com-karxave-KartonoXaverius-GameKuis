@@ -992,6 +992,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: ab26e5a4ee6287142a364b24d082bb9a, type: 2}
+        m_TargetAssemblyTypeName: InitialDataGamePlay, Assembly-CSharp
+        m_MethodName: set_GameIsOver
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1631684716}
         m_TargetAssemblyTypeName: GameSceneManager, Assembly-CSharp
         m_MethodName: OpenScene
@@ -3455,7 +3467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initialData: {fileID: 11400000, guid: ab26e5a4ee6287142a364b24d082bb9a, type: 2}
   _playerProgress: {fileID: 11400000, guid: 7422d66dda148ff4b948e9cd04a26286, type: 2}
-  _soalSoal: {fileID: 11400000, guid: 46330e9efa4d88040bbda8bfe5550792, type: 2}
+  _soalSoal: {fileID: 11400000, guid: 3ec99f46e353bdb4c8e27dfa6d2b02ad, type: 2}
   _pertanyaan: {fileID: 1042082992}
   _pilihanJawaban:
   - {fileID: 1538038288}

@@ -3,7 +3,12 @@ guid: 9059f173cbfa8114e96ff5aed55b830d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _initialData: {fileID: 11400000, guid: ab26e5a4ee6287142a364b24d082bb9a, type: 2}
+  - _playerProgress: {fileID: 11400000, guid: 7422d66dda148ff4b948e9cd04a26286, type: 2}
+  - _soalSoal: {instanceID: 0}
+  - _pertanyaan: {instanceID: 0}
+  - _gameSceneManager: {fileID: 1865786035219122903, guid: c4abed4c4cdf883468d6e25e701744d5, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

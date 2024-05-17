@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UI_OpsiLevelPack : MonoBehaviour
 {
-    public static event System.Action<LevelPackKuis, bool> EventIfClick;
+    public static event System.Action<UI_OpsiLevelPack, LevelPackKuis, bool> EventIfClick;
 
     [SerializeField]
     private Button _tombol = null;
@@ -48,7 +48,7 @@ public class UI_OpsiLevelPack : MonoBehaviour
 
     private void ifClicked() 
     {
-        EventIfClick?.Invoke(_levelPack, true);
+        EventIfClick?.Invoke(this, _levelPack, _terkunci);
     }
 
     public void LockLevelPack()

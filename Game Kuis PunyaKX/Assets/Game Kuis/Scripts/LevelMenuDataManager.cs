@@ -4,6 +4,9 @@ using TMPro;
 public class LevelMenuDataManager : MonoBehaviour
 {
     [SerializeField]
+    private InitialDataGamePlay _initialData = null;
+
+    [SerializeField]
     private UI_LevelPackList _levelPackList = null;
 
     [SerializeField]
@@ -29,5 +32,10 @@ public class LevelMenuDataManager : MonoBehaviour
         _numberCoin.text = $"{_playerProgress.progressData.koin}";
     }
 
-   
+    private void OnApplicationQuit()
+    {
+        _initialData.GameIsOver = false;
+    }
+
+
 }

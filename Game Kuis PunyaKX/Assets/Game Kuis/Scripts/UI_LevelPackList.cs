@@ -15,8 +15,8 @@ public class UI_LevelPackList : MonoBehaviour
     [SerializeField]
     private RectTransform _content = null;
 
-   [SerializeField]
-    private LevelPackKuis[] _levelPacks = new LevelPackKuis[0];
+   //[SerializeField]
+   // private LevelPackKuis[] _levelPacks = new LevelPackKuis[0];
 
     private void Start()
     {
@@ -24,7 +24,7 @@ public class UI_LevelPackList : MonoBehaviour
 
         if (_initialData.GameIsOver)
         {
-            UI_OpsiLevelPack_EventIfClick(_initialData.levelPack, false);
+            UI_OpsiLevelPack_EventIfClick(null, _initialData.levelPack, false);
         }
 
         //subscribe events
@@ -37,7 +37,7 @@ public class UI_LevelPackList : MonoBehaviour
         UI_OpsiLevelPack.EventIfClick -= UI_OpsiLevelPack_EventIfClick;
     }
 
-    private void UI_OpsiLevelPack_EventIfClick(LevelPackKuis levelPack, bool terkunci)
+    private void UI_OpsiLevelPack_EventIfClick(UI_OpsiLevelPack tombolLevelPack,  LevelPackKuis levelPack, bool terkunci)
     {
         if (terkunci) return;
 

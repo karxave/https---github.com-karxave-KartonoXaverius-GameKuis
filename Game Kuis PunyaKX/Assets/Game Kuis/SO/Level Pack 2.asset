@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Level Pack 2
   m_EditorClassIdentifier: 
   _isiLevel:
-  - {fileID: 11400000, guid: 9b8284406b89d04489d9e02918dad76b, type: 2}
-  - {fileID: 11400000, guid: 9b8284406b89d04489d9e02918dad76b, type: 2}
-  - {fileID: 11400000, guid: 9b8284406b89d04489d9e02918dad76b, type: 2}
-  - {fileID: 11400000, guid: 9b8284406b89d04489d9e02918dad76b, type: 2}
-  - {fileID: 11400000, guid: 9b8284406b89d04489d9e02918dad76b, type: 2}
+  - {fileID: 11400000, guid: 2ec29e120a44e5e489a424e3bd8315c6, type: 2}
+  - {fileID: 11400000, guid: f82bd4e6cf1de7a44939143d02e0be74, type: 2}
+  - {fileID: 11400000, guid: 2497fedc12af43c4699a70d18b93277d, type: 2}
+  - {fileID: 11400000, guid: 3595ac3cc8cb6934ebf6a9d6e4000be4, type: 2}
+  - {fileID: 11400000, guid: e9eb76fcfc1145340be1567f77b437b7, type: 2}
   _harga: 100

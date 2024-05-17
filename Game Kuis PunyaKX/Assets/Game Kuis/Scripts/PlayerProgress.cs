@@ -17,7 +17,7 @@ public class PlayerProgress : ScriptableObject
     }
 
     [SerializeField]
-    private string _filename = "contoh.txt";
+    private string _filename = "tes1.txt";
 
     [SerializeField]
     private string _startingLevelPackname = string.Empty;

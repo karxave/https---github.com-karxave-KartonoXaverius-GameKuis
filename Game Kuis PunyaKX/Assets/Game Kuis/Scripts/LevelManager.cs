@@ -76,18 +76,35 @@ public class LevelManager : MonoBehaviour
         UI_PoinJawaban.EventJawabSoal -= UI_PoinJawaban_EventJawabSoal;
     }
 
+    
+    private void OnApplicationQuit()
+        {
+            _initialData.GameIsOver = false;
+        }
+
    private void UI_PoinJawaban_EventJawabSoal(string answer, bool answerIsCorrect) 
     {
-        if (answerIsCorrect)
+      //  var nameLevelPack = _initialData.levelPack.name;
+
+       if (!answerIsCorrect) return;
+
+        string namaLevelPack = _initialData.levelPack.name;
+        int levelTerakhir = _playerProgress.progressData.progressLevel[namaLevelPack];
+
+
+        if (_indexSoal + 2 > levelTerakhir)
         {
             _playerProgress.progressData.koin += 20;
+
+            Debug.Log(_playerProgress.progressData.koin);
+
+            _playerProgress.progressData.progressLevel[namaLevelPack] = _indexSoal + 2;
+
+            _playerProgress.SimpanProgress();
         }
     }
 
-    private void OnApplicationQuit()
-    {
-        _initialData.GameIsOver = false;
-    }
+   
 
 
 }
