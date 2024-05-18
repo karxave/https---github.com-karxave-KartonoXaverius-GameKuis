@@ -4,6 +4,9 @@ using UnityEngine;
 public class UI_LevelPackList : MonoBehaviour
 {
     [SerializeField]
+    private Animator _animator = null;
+
+    [SerializeField]
     private InitialDataGamePlay _initialData = null;
 
     [SerializeField]
@@ -42,13 +45,15 @@ public class UI_LevelPackList : MonoBehaviour
         if (terkunci) return;
 
         // open Menu Levels
-        _levelList.gameObject.SetActive(true);
+        //_levelList.gameObject.SetActive(true);
         _levelList.UnloadLevelPack(levelPack);
 
         //close Menu Level Packs
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
 
         _initialData.levelPack = levelPack;
+
+        _animator.SetTrigger("KeLevels");
     }
 
     public void LoadLevelPack(LevelPackKuis[] levelPacks, PlayerProgress.MainData playerData)

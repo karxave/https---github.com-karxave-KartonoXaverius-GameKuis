@@ -30,6 +30,8 @@ public class LevelMenuDataManager : MonoBehaviour
         _levelPackList.LoadLevelPack(_levelPacks, _playerProgress.progressData);
 
         _numberCoin.text = $"{_playerProgress.progressData.koin}";
+
+        AudioManager.instance.PlayBGM(0);
     }
 
     private void OnApplicationQuit()

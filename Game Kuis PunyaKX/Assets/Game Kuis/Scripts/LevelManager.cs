@@ -25,6 +25,15 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private string _nameSceneChooseMenu = string.Empty;
 
+    [SerializeField]
+    private SoundButtonClicked __pemanggilSuara = null;
+
+    [SerializeField]
+    private AudioClip _suaraYouWin = null;
+
+    [SerializeField]
+    private AudioClip _suaraGameOver = null;
+
     public void NextLevel()
     {
         //soal index selanjutnya
@@ -66,6 +75,8 @@ public class LevelManager : MonoBehaviour
        
         NextLevel();
 
+        AudioManager.instance.PlayBGM(1);
+
         //subscribe events
         UI_PoinJawaban.EventJawabSoal += UI_PoinJawaban_EventJawabSoal;
     }
@@ -84,7 +95,9 @@ public class LevelManager : MonoBehaviour
 
    private void UI_PoinJawaban_EventJawabSoal(string answer, bool answerIsCorrect) 
     {
-      //  var nameLevelPack = _initialData.levelPack.name;
+        //  var nameLevelPack = _initialData.levelPack.name;
+
+        __pemanggilSuara.PlaySoundClickButton(answerIsCorrect ? _suaraYouWin : _suaraGameOver);
 
        if (!answerIsCorrect) return;
 

@@ -70,7 +70,9 @@
     <Compile Include="Assets\TesFolder\TesNewBehaviourScript.cs" />
     <Compile Include="Assets\Game Kuis\Scripts\UI_MenuConfirmMessage.cs" />
     <Compile Include="Assets\Game Kuis\Scripts\LevelPackKuis.cs" />
+    <Compile Include="Assets\Game Kuis\Scripts\SoundButtonClicked.cs" />
     <Compile Include="Assets\Game Kuis\Scripts\Ui_OpsiLevelKuis.cs" />
+    <Compile Include="Assets\Game Kuis\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Game Kuis\Scripts\UI_PesanLevel.cs" />
     <Compile Include="Assets\Game Kuis\Scripts\UI_Pertanyaan.cs" />
     <Compile Include="Assets\Game Kuis\Scripts\InitialDataGamePlay.cs" />
